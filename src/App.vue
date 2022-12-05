@@ -2,29 +2,27 @@
   <div id="app">
     <HeaderPage />
     <MainPage />
+    <FooterPage />
   </div>
 </template>
 
 <script>
 import HeaderPage from './components/HeaderPage.vue'
-import MainPage from './components/MainPage.vue'
+import MainPage from './components/MainPage.vue' 
+import FooterPage from './components/FooterPage.vue' 
 
 export default {
   name: 'App',
   components: {
     HeaderPage,
-    MainPage
+    MainPage,
+    FooterPage
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './css/global.scss';
+
+
 </style>
