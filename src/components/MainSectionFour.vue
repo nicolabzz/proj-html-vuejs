@@ -12,7 +12,7 @@
 
 <script>
 export default {
-	name: "MainSection4",
+	name: "MainSectionFour",
 };
 </script>
 

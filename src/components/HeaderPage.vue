@@ -84,7 +84,7 @@
 						<img src="../assets/img/client-logo-01.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<!-- <img src="../assets/img/client-logo-02.png" alt=""> -->
+						<img src="../assets/img/client-logo-02.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
 						<img src="../assets/img/client-logo-03.png" alt="" />
@@ -94,6 +94,9 @@
 					</div>
 					<div class="client-img-fitter">
 						<img src="../assets/img/client-logo-05.png" alt="" />
+					</div>
+					<div class="client-img-fitter">
+						<img src="../assets/img/client-logo-06.png" alt="" />
 					</div>
 				</div>
 			</div>
@@ -182,7 +185,7 @@ header {
 
 // Bottom header SCSS section
 .container-bottom {
-	border: 2px solid black;
+	// border: 2px solid black;
 	margin: 0 auto;
 	margin-top: 75px;
 	height: 875px;
@@ -192,7 +195,7 @@ header {
 	justify-content: center;
 
 	.text-presentation-container {
-		border: 2px solid purple;
+		// border: 2px solid purple;
 		font-family: "Inter", sans-serif;
 		height: 75%;
 		width: 40%;
@@ -255,7 +258,7 @@ header {
 	}
 
 	.big-pic-presentation {
-		border: 2px solid firebrick;
+		// border: 2px solid firebrick;
 		height: 75%;
 		width: 60%;
 		display: flex;
@@ -272,26 +275,29 @@ header {
 	}
 
 	.clinents-logos {
-		border: 2px solid yellowgreen;
+		// border: 2px solid yellowgreen;
 		height: 25%;
 		width: 100%;
 		display: flex;
 		justify-content: center;
 
 		.client-img-container {
-			border: 2px solid blue;
+			// border: 2px solid blue;
 			width: 1200px;
 			height: 218, 75px;
 			display: flex;
 			flex-wrap: wrap;
 
 			.client-img-fitter {
-				border: 2px solid black;
+				// border: 2px solid black;
 				height: 100%;
-				width: calc(100% / 5);
-				// display: flex;
+				width: calc(100% / 6);
+				opacity: 0.5;
 
 				img {
+					object-fit: contain;
+					scale: 0.4;
+					height: 100%;
 				}
 			}
 		}

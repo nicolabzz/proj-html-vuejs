@@ -55,7 +55,7 @@
 
 <script>
 export default {
-	name: "MainSection3",
+	name: "MainSectionThree",
 };
 </script>
 

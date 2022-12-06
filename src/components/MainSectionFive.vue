@@ -11,7 +11,7 @@
 
 <script>
 export default {
-	name: "MainSection5",
+	name: "MainSectionFive",
 };
 </script>
 
