@@ -157,8 +157,6 @@ header {
 				gap: 1.6rem;
 
 				a {
-					text-decoration: none;
-					font-family: "Inter", sans-serif;
 					color: #0b0b0b;
 					display: flex;
 					align-items: center;
@@ -175,7 +173,6 @@ header {
 				padding: 1rem 0.8rem;
 				font-size: 1rem;
 				border-radius: 3px;
-				font-family: "Inter", sans-serif;
 				background-color: #f5f5f5;
 				border: none;
 			}
@@ -196,7 +193,6 @@ header {
 
 	.text-presentation-container {
 		// border: 2px solid purple;
-		font-family: "Inter", sans-serif;
 		height: 75%;
 		width: 40%;
 		display: flex;

@@ -82,7 +82,9 @@
 
 				<!-- Button "all courses" -->
 				<div class="courses-btn">
-					<button>View all courses <i class="fa-solid fa-arrow-right-long"></i></button>
+					<button>
+						View all courses <i class="fa-solid fa-arrow-right-long"></i>
+					</button>
 				</div>
 			</div>
 		</section>
@@ -96,10 +98,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url(../css/global.scss);
+@import "../css/global.scss";
 
 main {
-background-color: #F5F7FA;
+	background-color: #f5f7fa;
 }
 
 .max-container {
@@ -107,7 +109,6 @@ background-color: #F5F7FA;
 	width: 1150px;
 	height: 950px;
 	margin: auto;
-	font-family: "Inter", sans-serif;
 
 	.title {
 		border: 2px solid pink;
@@ -143,7 +144,7 @@ background-color: #F5F7FA;
 			height: 221px;
 			display: flex;
 			align-items: center;
-			padding: 5px;
+			padding: 15px;
 
 			.card-pic {
 				// border: 1px solid orange;
@@ -163,7 +164,7 @@ background-color: #F5F7FA;
 				// border: 2px solid black;
 				height: 100%;
 				width: 70%;
-				padding: 1rem 0 .6rem 1rem;
+				padding: 1rem 0 0.6rem 1rem;
 
 				p {
 					font-size: 1.5rem;
@@ -177,11 +178,11 @@ background-color: #F5F7FA;
 				}
 
 				span {
-				color: #aeadae;
+					color: #aeadae;
 
-				i {
-				margin-right: .5rem;
-				}
+					i {
+						margin-right: 0.5rem;
+					}
 				}
 
 				span:last-child {
@@ -199,11 +200,10 @@ background-color: #F5F7FA;
 		justify-content: center;
 
 		button {
-			padding: .8rem 2.8rem;
+			padding: 0.8rem 2.8rem;
 			border: none;
-			background-color: #20AD96;
+			background-color: #20ad96;
 			color: white;
-			font-family: "Inter", sans-serif;
 			cursor: pointer;
 			border-radius: 4px;
 			font-weight: 600;
