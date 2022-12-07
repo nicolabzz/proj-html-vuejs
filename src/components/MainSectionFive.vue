@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url(../css/global.scss);
+@import "../css/global.scss";
 </style>
