@@ -136,9 +136,6 @@ export default {
 				padding: 2rem 0;
 				// font-size: .8rem;
 			}
-
-			a {
-			}
 		}
 	}
 
