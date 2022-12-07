@@ -176,7 +176,12 @@ main {
 			padding: 1rem 5rem;
 			border-radius: 4px;
 			font-weight: 800;
-			cursor: pointer;
+			transition: 0.2s ease-in-out;
+
+			&:hover {
+				background-color: #3f3a64;
+				cursor: pointer;
+			}
 		}
 	}
 }

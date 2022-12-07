@@ -228,6 +228,12 @@ header {
 					padding: 1rem 3rem;
 					color: white;
 					font-weight: 800;
+					transition: 0.2s ease-in-out;
+
+					&:hover {
+						background-color: #3f3a64;
+						cursor: pointer;
+					}
 
 					i {
 						margin-right: 1rem;

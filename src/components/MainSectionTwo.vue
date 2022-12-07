@@ -1,7 +1,7 @@
 <template>
 	<!-- Second section -->
 	<main>
-		<sectoin class="second-section">
+		<section class="second-section">
 			<!-- This div sets the second section's max width -->
 			<div class="max-container">
 				<!-- Title -->
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 			</div>
-		</sectoin>
+		</section>
 	</main>
 </template>
 

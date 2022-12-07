@@ -145,6 +145,13 @@ main {
 			display: flex;
 			align-items: center;
 			padding: 15px;
+			transition: .2s ease-in-out;
+
+			&:hover {
+			cursor: pointer;
+			background-color: white;
+			border-radius: 5px;
+			}
 
 			.card-pic {
 				// border: 1px solid orange;
@@ -175,6 +182,12 @@ main {
 				h3 {
 					color: #3f3a64;
 					margin: 1.5rem 0;
+					transition: .2s ease-in-out;
+
+					&:hover {
+					color: #20ad96;
+					cursor: pointer;
+					}
 				}
 
 				span {
@@ -207,6 +220,12 @@ main {
 			cursor: pointer;
 			border-radius: 4px;
 			font-weight: 600;
+			transition: 0.2s ease-in-out;
+
+			&:hover {
+				background-color: #3f3a64;
+				cursor: pointer;
+			}
 		}
 	}
 }
