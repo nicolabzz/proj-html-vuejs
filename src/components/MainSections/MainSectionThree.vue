@@ -7,11 +7,11 @@
 			<h1>Our <span>top learners'</span> verbatim</h1>
 		</div>
 
-		<!-- Testimonials cards -->
+		<!-- Testimonials cards section -->
 		<div class="testimonials-cards-container">
 			<!-- Cards -->
 			<div class="testimonial-card">
-				<div class="testimonial-text">
+				<div class="testimonial-text-content">
 					<h3>High level of efficency and scientific teaching methods</h3>
 					<p>
 						I am free ro learn at my own peace, fllow my own schedule and choose
@@ -19,7 +19,7 @@
 						for people like me.
 					</p>
 				</div>
-				<div class="testimonial-pic-n-name">
+				<div class="testimonial-info">
 					<div class="testimonial-pic">
 						<img src="img/testimonial-avata-02.jpg" alt="" />
 					</div>
@@ -90,7 +90,7 @@ main {
 		padding: 2rem;
 		background-color: white;
 
-		.testimonial-text {
+		.testimonial-text-content {
 			// border: 2px solid blue;
 			height: 60%;
 			width: 100%;
@@ -108,7 +108,7 @@ main {
 			}
 		}
 
-		.testimonial-pic-n-name {
+		.testimonial-info {
 			// border: 2px solid salmon;
 			display: flex;
 			padding: 0 2rem;

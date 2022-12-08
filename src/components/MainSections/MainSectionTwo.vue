@@ -10,25 +10,17 @@
 					<h1>Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 				</div>
 
-				<!-- Cards course's benefits -->
+				<!-- Cards smart tutoring course's benefits -->
 				<div class="benefits-cards-container">
-					<div class="card">
-						<div class="card-pic">
-							<img src="img/home-2-image-box-01.png" alt="" />
-						</div>
-						<div class="card-text">
-							<h3>Costumize Preferences</h3>
-							<p>
-								Learners are given the right to arrange and costumize their
-								study schedule and timetable based on preferences.
-							</p>
-							<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-								>Start Here <i class="fa-solid fa-arrow-right-long"></i
-							></a>
-						</div>
-					</div>
-					<div class="card"></div>
-					<div class="card"></div>
+					<CardBenefitsMST
+						v-for="objCard in arrSmartTutoring"
+						:key="objCard"
+						:imgPic="objCard.imgSrc"
+						:title="objCard.textTitle"
+						:content="objCard.textContent"
+						:link="objCard.textLink"
+						class="CardBenefits"
+					/>
 				</div>
 
 				<!-- "YouTube video" and "enjoy" section -->
@@ -66,8 +58,38 @@
 </template>
 
 <script>
+import CardBenefitsMST from "../Cards-Cycling/CardBenefitsMST.vue";
+
 export default {
 	name: "MainSectionTwo",
+	components: {
+		CardBenefitsMST,
+	},
+	data() {
+		return {
+			arrSmartTutoring: [
+				{
+					imgSrc: "img/home-2-image-box-01.png",
+					textTitle: "Costumize Preferences",
+					textContent:
+						"Learners are given the right to arrange and costumize their study schedule and timetable based on preferences.",
+					textLink: "Start Here",
+				},
+				{
+					imgSrc: "img/about-us-02-image-box-02.png",
+					textTitle: "Cloud Storage",
+					textContent: "You can store online lessons via online cloud or download to your device and revise lessions on the way.",
+					textLink: "Get Free Quote",
+				},
+				{
+					imgSrc: "img/home-2-image-box-03.png",
+					textTitle: "Multimedia Channels",
+					textContent: "We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.",
+					textLink: "Start Here",
+				},
+			],
+		};
+	},
 };
 </script>
 
@@ -75,13 +97,14 @@ export default {
 @import "../../css/global.scss";
 
 .max-container {
-	border: 2px solid black;
+	// border: 2px solid black;
 	width: 1375px;
 	height: 1100px;
 	margin: auto;
 
+	// Title section
 	.title {
-		border: 2px solid cadetblue;
+		// border: 2px solid cadetblue;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -98,49 +121,28 @@ export default {
 			color: #3f3a64;
 
 			span {
-				color: #25ab94;
+				color: #20AD96;
 				font-weight: 400;
 			}
 		}
 	}
+
+	// Carde course Bnefits
 	.benefits-cards-container {
-		border: 2px solid cadetblue;
+		// border: 2px solid cadetblue;
 		margin: 0 auto;
 		display: flex;
-		width: 1150px;
+		width: 1250px;
 		height: 35%;
 
-		.card {
-			border: 2px solid greenyellow;
-			width: calc(100% / 3);
-
-			.card-pic {
-				border: 2px solid salmon;
-				height: 50%;
-				width: 100%;
-
-				img {
-					height: 100%;
-					object-fit: contain;
-					object-position: left;
-					scale: 0.87;
-				}
-			}
-
-			h3 {
-				color: #3f3a64;
-			}
-
-			p {
-				color: #9795ab;
-				padding: 2rem 0;
-				// font-size: .8rem;
-			}
+		.CardBenefits {
+			flex: 0 0 33.33333333333%;
 		}
 	}
 
+	//Bottom section w/ YT video
 	.yt-n-enjoy-container {
-		border: 2px solid cadetblue;
+		// border: 2px solid cadetblue;
 		height: 50%;
 		width: 100%;
 		display: flex;
