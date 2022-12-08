@@ -14,12 +14,24 @@
 				<!-- Nav options -->
 				<div class="nav-section">
 					<nav>
-						<a href="">Home<i class="fa-solid fa-chevron-down"></i></a>
-						<a href="">Pages<i class="fa-solid fa-chevron-down"></i></a>
-						<a href="">Courses<i class="fa-solid fa-chevron-down"></i></a>
-						<a href="">Features<i class="fa-solid fa-chevron-down"></i></a>
-						<a href="">Blog<i class="fa-solid fa-chevron-down"></i></a>
-						<a href="">Shop<i class="fa-solid fa-chevron-down"></i></a>
+						<a href="" class="hover-underline-animation"
+							>Home<i class="fa-solid fa-chevron-down"></i
+						></a>
+						<a href="" class="hover-underline-animation"
+							>Pages<i class="fa-solid fa-chevron-down"></i
+						></a>
+						<a href="" class="hover-underline-animation"
+							>Courses<i class="fa-solid fa-chevron-down"></i
+						></a>
+						<a href="" class="hover-underline-animation"
+							>Features<i class="fa-solid fa-chevron-down"></i
+						></a>
+						<a href="" class="hover-underline-animation"
+							>Blog<i class="fa-solid fa-chevron-down"></i
+						></a>
+						<a href="" class="hover-underline-animation"
+							>Shop<i class="fa-solid fa-chevron-down"></i
+						></a>
 					</nav>
 
 					<!-- Account -->
@@ -161,11 +173,39 @@ header {
 					display: flex;
 					align-items: center;
 					font-stretch: 2px;
+					position: relative;
 
 					i {
 						margin-left: 7px;
 						font-size: 12px;
 					}
+
+					&:hover {
+						color: #20ad96;
+					}
+				}
+
+				.hover-underline-animation {
+					position: relative;
+					text-decoration: none;
+				}
+
+				.hover-underline-animation::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					transform: scaleX(0);
+					height: 2px;
+					bottom: 0;
+					left: 0;
+					background-color: #20ad96;
+					transform-origin: bottom right;
+					transition: transform 0.25s ease-out;
+				}
+
+				.hover-underline-animation:hover::after {
+					transform: scaleX(1);
+					transform-origin: bottom left;
 				}
 			}
 
