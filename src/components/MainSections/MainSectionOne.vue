@@ -47,46 +47,46 @@ export default {
 		return {
 			arrOnlineCourses: [
 				{
-					imgSrc: 'img/course-02-480x298.jpg',
-					price: '$40.00',
-					text: 'Learning to Write as a Professional Author',
-					lessions: ' 20 Lessons',
-					students: ' 50 Students',
+					imgSrc: "img/course-02-480x298.jpg",
+					price: "$40.00",
+					text: "Learning to Write as a Professional Author",
+					lessions: " 20 Lessons",
+					students: " 50 Students",
 				},
 				{
-					imgSrc: 'img/stock-full-hd-03-480x298.jpg',
-					price: 'Free',
-					text: 'Costumer-centric Info-Tech Strangers',
-					lessions: ' 24 Lessons',
-					students: ' 769 Students',
+					imgSrc: "img/stock-full-hd-03-480x298.jpg",
+					price: "Free",
+					text: "Costumer-centric Info-Tech Strangers",
+					lessions: " 24 Lessons",
+					students: " 769 Students",
 				},
 				{
-					imgSrc: 'img/stock-full-hd-04-480x298.jpg',
-					price: '$19.00',
-					text: 'Open Programming Courses for Everyone:Python',
-					lessions: ' 17 Lessons',
-					students: ' 62 Students',
+					imgSrc: "img/stock-full-hd-04-480x298.jpg",
+					price: "$19.00",
+					text: "Open Programming Courses for Everyone:Python",
+					lessions: " 17 Lessons",
+					students: " 62 Students",
 				},
 				{
-					imgSrc: 'img/stock-full-hd-06-480x298.jpg',
-					price: '$26.00',
-					text: 'Accademic Listening and Note-taking',
-					lessions: ' 14 Lessons',
-					students: ' 67 Students',
+					imgSrc: "img/stock-full-hd-06-480x298.jpg",
+					price: "$26.00",
+					text: "Accademic Listening and Note-taking",
+					lessions: " 14 Lessons",
+					students: " 67 Students",
 				},
 				{
-					imgSrc: 'img/course-featured-image-01-480x298.jpg',
-					price: '$39.00',
-					text: 'Master jQuery in a Short Period of Time',
-					lessions: ' 6 Lessons',
-					students: ' 51 Students',
+					imgSrc: "img/course-featured-image-01-480x298.jpg",
+					price: "$39.00",
+					text: "Master jQuery in a Short Period of Time",
+					lessions: " 6 Lessons",
+					students: " 51 Students",
 				},
 				{
-					imgSrc: 'img/stock-full-hd-05-480x298.jpg',
-					price: '$59.00',
-					text: 'Introduction to Javascript for Beginners',
-					lessions: ' 14 Lessons',
-					students: ' 76 Students',
+					imgSrc: "img/stock-full-hd-05-480x298.jpg",
+					price: "$59.00",
+					text: "Introduction to Javascript for Beginners",
+					lessions: " 14 Lessons",
+					students: " 76 Students",
 				},
 			],
 		};
@@ -102,13 +102,13 @@ main {
 }
 
 .max-container {
-	border: 2px solid yellow;
-	width: 1150px;
-	height: 950px;
+	// border: 2px solid yellow;
+	width: 1170px;
+	height: 1100px;
 	margin: auto;
 
 	.title {
-		border: 2px solid pink;
+		// border: 2px solid pink;
 		width: 100%;
 		height: 20%;
 		display: flex;
@@ -129,32 +129,30 @@ main {
 	}
 
 	.lessions-cards-container {
-		border: 2px solid palevioletred;
+		// border: 2px solid palevioletred;
 		width: 100%;
 		height: 70%;
 		display: flex;
 		flex-wrap: wrap;
 
 		.CardCourse {
-		flex: 0 0 50%;
+			flex: 0 0 50%;
 		}
 	}
 
 	.courses-btn {
-		border: 1px solid red;
+		// border: 1px solid red;
 		height: 10%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		text-align: center;
 
 		button {
-			padding: 0.8rem 2.8rem;
+			padding: 1rem 4rem;
 			border: none;
 			background-color: #20ad96;
 			color: white;
 			cursor: pointer;
-			border-radius: 4px;
-			font-weight: 600;
+			border-radius: 5px;
+			font-weight: 800;
 			transition: 0.2s ease-in-out;
 
 			&:hover {
