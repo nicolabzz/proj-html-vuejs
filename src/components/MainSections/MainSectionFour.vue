@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../css/global.scss";
+@import "../../css/global.scss";
 
 .cards-container {
 	border: 2px solid palevioletred;

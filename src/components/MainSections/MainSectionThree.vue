@@ -21,7 +21,7 @@
 				</div>
 				<div class="testimonial-pic-n-name">
 					<div class="testimonial-pic">
-						<img src="../assets/img/testimonial-avata-02.jpg" alt="" />
+						<img src="img/testimonial-avata-02.jpg" alt="" />
 					</div>
 					<div class="testimonial-name">
 						<h4>MINA HOLLACE</h4>
@@ -49,7 +49,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../css/global.scss";
+@import "../../css/global.scss";
+
 main {
 	background-color: #f8f8f8;
 }

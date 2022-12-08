@@ -14,7 +14,7 @@
 				<div class="benefits-cards-container">
 					<div class="card">
 						<div class="card-pic">
-							<img src="../assets/img/home-2-image-box-01.png" alt="" />
+							<img src="img/home-2-image-box-01.png" alt="" />
 						</div>
 						<div class="card-text">
 							<h3>Costumize Preferences</h3>
@@ -38,7 +38,7 @@
 						<!-- YT Video -->
 						<div class="video-section">
 							<div class="logo">
-								<img src="../assets/img/icon-youtube-play.png" alt="" />
+								<img src="img/icon-youtube-play.png" alt="" />
 							</div>
 						</div>
 					</div>
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../css/global.scss";
+@import "../../css/global.scss";
 
 .max-container {
 	border: 2px solid black;
@@ -158,7 +158,8 @@ export default {
 				position: absolute;
 				right: 20px;
 				bottom: 20px;
-				background-image: url(../assets/img/home-2-popup-video-poster.jpg);
+				background-image: url(../../../public/img/home-2-popup-video-poster.jpg);
+				z-index: 0;
 				background-repeat: no-repeat;
 				background-size: contain;
 				display: flex;

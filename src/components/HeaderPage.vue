@@ -8,7 +8,7 @@
 			<section class="header-top">
 				<!-- Logo -->
 				<div class="logo">
-					<img src="../assets/img/dark-logo.png" alt="" />
+					<img src="img/dark-logo.png" alt="" />
 				</div>
 
 				<!-- Nav options -->
@@ -83,7 +83,7 @@
 			<div class="big-pic-presentation">
 				<div class="img-fitter">
 					<img
-						src="../assets/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
+						src="img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
 						alt=""
 					/>
 				</div>
@@ -93,22 +93,22 @@
 			<div class="clinents-logos">
 				<div class="client-img-container">
 					<div class="client-img-fitter">
-						<img src="../assets/img/client-logo-01.png" alt="" />
+						<img src="img/client-logo-01.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="../assets/img/client-logo-02.png" alt="" />
+						<img src="img/client-logo-02.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="../assets/img/client-logo-03.png" alt="" />
+						<img src="img/client-logo-03.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="../assets/img/client-logo-04.png" alt="" />
+						<img src="img/client-logo-04.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="../assets/img/client-logo-05.png" alt="" />
+						<img src="img/client-logo-05.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="../assets/img/client-logo-06.png" alt="" />
+						<img src="img/client-logo-06.png" alt="" />
 					</div>
 				</div>
 			</div>

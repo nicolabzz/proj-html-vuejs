@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import MainSectionOne from "./MainSectionOne.vue";
-import MainSectionTwo from "./MainSectionTwo.vue";
-import MainSectionThree from "./MainSectionThree.vue";
-import MainSectionFour from "./MainSectionFour.vue";
-import MainSectionFive from "./MainSectionFive.vue";
+import MainSectionOne from "./MainSections/MainSectionOne.vue";
+import MainSectionTwo from "./MainSections/MainSectionTwo.vue";
+import MainSectionThree from "./MainSections/MainSectionThree.vue";
+import MainSectionFour from "./MainSections/MainSectionFour.vue";
+import MainSectionFive from "./MainSections/MainSectionFive.vue";
 
 export default {
 	name: "MainPage",

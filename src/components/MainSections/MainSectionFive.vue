@@ -41,7 +41,7 @@
 
 			<div class="card-blog">
 				<div class="card-pic">
-					<img src="../assets/img/artist-blog-03-480x352.jpeg" alt="" />
+					<img src="img/artist-blog-03-480x352.jpeg" alt="" />
 				</div>
 				<div class="card-blog-text">
 					<h4>ARTIST</h4>
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../css/global.scss";
+@import "../../css/global.scss";
 
 main {
 	background-color: #f5f1ed;
