@@ -12,7 +12,7 @@
 
 				<!-- Lessions Cards -->
 				<div class="lessions-cards-container">
-					<CardCoursesMSO
+					<CardCoursesMS1
 						v-for="objCard in arrOnlineCourses"
 						:key="objCard"
 						:imgPic="objCard.imgSrc"
@@ -36,12 +36,12 @@
 </template>
 
 <script>
-import CardCoursesMSO from "../Cards-Cycling/CardCoursesMSO.vue";
+import CardCoursesMS1 from "../Cards-Cycling/CardCoursesMS1.vue";
 
 export default {
 	name: "MainSectionOne",
 	components: {
-		CardCoursesMSO,
+		CardCoursesMS1,
 	},
 	data() {
 		return {

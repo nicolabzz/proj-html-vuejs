@@ -13,10 +13,8 @@
 </template>
 
 <script>
-
-
 export default {
-	name: "CardCoursesMSO",
+	name: "CardCoursesMS1",
 	props: {
 		imgPic: String,
 		cost: String,
@@ -42,6 +40,7 @@ export default {
 		cursor: pointer;
 		background-color: white;
 		border-radius: 5px;
+		box-shadow: 2px 2px 5 lightgray;
 	}
 
 	.card-pic {

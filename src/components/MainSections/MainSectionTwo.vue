@@ -12,7 +12,7 @@
 
 				<!-- Cards smart tutoring course's benefits -->
 				<div class="benefits-cards-container">
-					<CardBenefitsMST
+					<CardBenefitsMS2
 						v-for="objCard in arrSmartTutoring"
 						:key="objCard"
 						:imgPic="objCard.imgSrc"
@@ -58,12 +58,12 @@
 </template>
 
 <script>
-import CardBenefitsMST from "../Cards-Cycling/CardBenefitsMST.vue";
+import CardBenefitsMS2 from "../Cards-Cycling/CardBenefitsMS2.vue";
 
 export default {
 	name: "MainSectionTwo",
 	components: {
-		CardBenefitsMST,
+		CardBenefitsMS2,
 	},
 	data() {
 		return {

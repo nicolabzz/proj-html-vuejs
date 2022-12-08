@@ -19,7 +19,7 @@
 
 <script>
 export default {
-	name: "CardBenefitsMST",
+	name: "CardBenefitsMS2",
 	props: {
 		imgPic: String,
 		title: String,
