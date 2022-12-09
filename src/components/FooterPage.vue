@@ -7,6 +7,15 @@
 		<div class="top-section">
 			<!-- This div sets the max width for the contents -->
 			<div class="top-max-container">
+				<div class="green-circle">
+					<img src="img/green-circle.png" alt="" />
+				</div>
+				<div class="colored-lines">
+					<img src="img/maxcoach-shape-02.png" alt="" />
+				</div>
+				<div class="details-grid">
+					<img src="img/maxcoach-shape-09.png" alt="" />
+				</div>
 				<!-- Contents -->
 				<div class="top-centering">
 					<div class="subscribe-text">
@@ -148,9 +157,39 @@ footer {
 
 //Top FOOTER
 .top-max-container {
+	// border: 2px solid orange;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+
+	.green-circle {
+		// border: 1px solid firebrick;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		bottom: 25%;
+	}
+	.colored-lines {
+		width: 135px;
+		height: 135px;
+		right: 0;
+		bottom: 25%;
+		overflow: hidden;
+		position: absolute;
+	}
+	.details-grid {
+		// border: 2px solid orange;
+
+		width: 200px;
+		height: 200px;
+		right: 2rem;
+		top: 6%;
+		overflow: hidden;
+		position: absolute;
+	}
 
 	.top-centering {
 		// border: 2px solid orange;
