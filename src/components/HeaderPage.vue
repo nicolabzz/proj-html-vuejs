@@ -71,7 +71,7 @@
 
 			<!-- Big Pic -->
 			<div class="big-pic-presentation">
-				\
+				
 				<div class="dit1">
 					<img src="img/maxcoach-shape-08.png/" alt="" />
 				</div>
