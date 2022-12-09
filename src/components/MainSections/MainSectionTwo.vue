@@ -193,6 +193,12 @@ main {
 				justify-content: center;
 				align-items: center;
 				border-radius: 5px;
+				transition: .4s ease-in-out;
+
+				&:hover {
+					scale: (1.01);
+					cursor: pointer;
+				}
 
 				.logo {
 					width: 100px;
