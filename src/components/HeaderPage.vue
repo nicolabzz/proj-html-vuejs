@@ -13,26 +13,16 @@
 
 				<!-- Nav options -->
 				<div class="nav-section">
-					<nav>
-						<a href="" class="hover-underline-animation"
-							>Home<i class="fa-solid fa-chevron-down"></i
+					<!-- <nav>
+						<a
+							v-for="(link, i) in arrLinksNav"
+							:key="i"
+							href="!#"
+							class="hover-underline-animation"
+							>{{ link }}<i class="fa-solid fa-chevron-down"></i
 						></a>
-						<a href="" class="hover-underline-animation"
-							>Pages<i class="fa-solid fa-chevron-down"></i
-						></a>
-						<a href="" class="hover-underline-animation"
-							>Courses<i class="fa-solid fa-chevron-down"></i
-						></a>
-						<a href="" class="hover-underline-animation"
-							>Features<i class="fa-solid fa-chevron-down"></i
-						></a>
-						<a href="" class="hover-underline-animation"
-							>Blog<i class="fa-solid fa-chevron-down"></i
-						></a>
-						<a href="" class="hover-underline-animation"
-							>Shop<i class="fa-solid fa-chevron-down"></i
-						></a>
-					</nav>
+					</nav> -->
+					<LinksNavHeader :navData="navData" />
 
 					<!-- Account -->
 					<div class="account">
@@ -117,8 +107,39 @@
 </template>
 
 <script>
+import LinksNavHeader from "@/components/Cards-Cycling/LinksNavHeader.vue";
+
 export default {
 	name: "HeaderPage",
+	components: {
+		LinksNavHeader,
+	},
+	data() {
+		return {
+			navData: {
+				links: [
+					{
+						link: "Home",
+					},
+					{
+						link: "Pages",
+					},
+					{
+						link: "Courses",
+					},
+					{
+						link: "Features",
+					},
+					{
+						link: "Blog",
+					},
+					{
+						link: "Shop",
+					},
+				],
+			},
+		};
+	},
 };
 </script>
 
@@ -154,6 +175,7 @@ header {
 			width: 160px;
 			display: flex;
 			align-items: center;
+			cursor: pointer;
 		}
 
 		.nav-section {
@@ -163,6 +185,21 @@ header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
+			.links-nav {
+				// flex: 0 0 16.66666666666667%;
+			}
+
+			.account {
+				transition: 0.2s ease-in-out;
+				scale: (1);
+
+				&:hover {
+					scale: (1.11);
+					color: #20ad96;
+					cursor: pointer;
+				}
+			}
 
 			.search-section {
 				// border: 2px solid black;
@@ -178,52 +215,7 @@ header {
 					}
 				}
 			}
-
-			nav {
-				display: flex;
-				gap: 1.6rem;
-
-				a {
-					color: #0b0b0b;
-					display: flex;
-					align-items: center;
-					font-stretch: 2px;
-					position: relative;
-
-					i {
-						margin-left: 7px;
-						font-size: 12px;
-					}
-
-					&:hover {
-						color: #20ad96;
-					}
-				}
-
-				.hover-underline-animation {
-					position: relative;
-					text-decoration: none;
-				}
-
-				.hover-underline-animation::after {
-					content: "";
-					position: absolute;
-					width: 100%;
-					transform: scaleX(0);
-					height: 2px;
-					bottom: 0;
-					left: 0;
-					background-color: #20ad96;
-					transform-origin: bottom right;
-					transition: transform 0.25s ease-out;
-				}
-
-				.hover-underline-animation:hover::after {
-					transform: scaleX(1);
-					transform-origin: bottom left;
-				}
-			}
-
+			
 			input {
 				padding: 1rem 0.8rem;
 				font-size: 1rem;

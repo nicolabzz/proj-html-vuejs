@@ -31,14 +31,7 @@
 			<!-- This div sets the max width for the contents -->
 			<div class="bottom-max-container">
 				<!--  Links -->
-				<AddressLinksFooter
-					v-for="objLinksAddress in dataFooter.arrLinksAddress"
-					:key="objLinksAddress.id"
-					:title="objLinksAddress.dataFooter.arrLinksAddress"
-					:address="objLinksAddress.dataFooter.arrLinksAddress"
-					:number="objLinksAddress.dataFooter.arrLinksAddress"
-					:mail="objLinksAddress.dataFooter.arrLinksAddress"
-				/>
+				<AddressLinksFooter :footerData="footerData" />
 				<!-- <div class="links-section">
 					<div class="address">
 						<h3>Address</h3>
@@ -56,26 +49,9 @@
 				</div> -->
 
 				<div class="explore-information">
-					<ExploreLinksFooter
-						v-for="objLinksExplore in dataFooter.arrLinksExplore"
-						:key="objLinksExplore.id"
-						:title="objLinksExplore.dataFooter.arrLinksExplore"
-						:linkOne="objLinksExplore.dataFooter.arrLinksExplore"
-						:linkTwo="objLinksExplore.dataFooter.arrLinksExplore"
-						:linkThree="objLinksExplore.dataFooter.arrLinksExplore"
-						:linkFour="objLinksExplore.dataFooter.arrLinksExplore"
-						:linkFive="objLinksExplore.dataFooter.arrLinksExplore"
-						:linkSix="objLinksExplore.dataFooter.arrLinksExplore"
-					/>
-					<InformationLinksFooter
-						v-for="objLinksInformation in dataFooter.arrLinksInformation"
-						:key="objLinksInformation.id"
-						:title="objLinksInformation.dataFooter.arrLinksInformation"
-						:linkOne="objLinksInformation.dataFooter.arrLinksInformation"
-						:linkTwo="objLinksInformation.dataFooter.arrLinksInformation"
-						:linkThree="objLinksInformation.dataFooter.arrLinksInformation"
-						:linkFour="objLinksInformation.dataFooter.arrLinksInformation"
-					/>
+					<ExploreLinksFooter :footerData="footerData" />
+
+					<InformationLinksFooter :footerData="footerData" />
 					<!-- <div class="explore">
 						<h3>Explore</h3>
 						<div id="col1">
@@ -108,6 +84,11 @@
 					</p>
 				</div>
 			</div>
+			<div class="arrow-top-container">
+				<div class="arrow-top">
+					<span><i class="fa-solid fa-arrow-up-long"></i></span>
+				</div>
+			</div>
 		</div>
 	</footer>
 </template>
@@ -126,35 +107,44 @@ export default {
 	},
 	data() {
 		return {
-			dataFooter: {
-				arrLinksAddress: [
-					{
-						linksTitle: "Address",
-						location: "382 NE 191st St # 87394 Miami, FL 33179-3899",
-						phone: "+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)",
-						eMail: "support@maxcoach.com",
-					},
-				],
-				arrLinksExplore: [
-					{
-						linksTitle: "Explore",
-						link1: "Start here",
-						link2: "Blog",
-						link3: "About us",
-						link4: "Success story",
-						link5: "Courses",
-						link6: "Contuct us",
-					},
-				],
-				arrLinksInformation: [
-					{
-						linksTitle: "Information",
-						link1: "Membership",
-						link2: "Purchase guide",
-						link3: "Privacy policy",
-						link4: "Terms of services",
-					},
-				],
+			footerData: {
+				// ADDRESS COLUMN
+				addressCol: {
+					linkTitle: "Address",
+					location: "382 NE 191st St # 87394 Miami, FL 33179-3899",
+					phone: "+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)",
+					eMail: "support@maxcoach.com",
+					social: [
+						{
+							socialLink: "fa-brands fa-square-facebook",
+						},
+						{
+							socialLink: "fa-brands fa-twitter",
+						},
+						{
+							socialLink: "fa-brands fa-instagram",
+						},
+						{
+							socialLink: "fa-brands fa-linkedin",
+						},
+					],
+				},
+				//EXPLORE COLUMN
+				exploreCol: {
+					linkTitle: "Explore",
+					links1: ["Start here", "Blog", "About us"],
+					links2: ["Success story", "Courses", "Contuct us"],
+				},
+				//INFORMATION COLUMN
+				informationCol: {
+					linkTitle: "Information",
+					links: [
+						"Membership",
+						"Purchase guide",
+						"Privacy policy",
+						"Terms of services",
+					],
+				},
 			},
 		};
 	},
@@ -382,9 +372,44 @@ footer {
 		text-align: center;
 
 		p {
-			font-size: 12px;
-			color: #696969;
+			font-size: 14px;
+			color: #c3c3c3;
 			font-weight: 600;
+		}
+	}
+}
+
+.arrow-top-container {
+	// border: 2px solid blue;
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 0 1rem 0.5rem 0;
+	background-color: #f8f8f8;
+
+	.arrow-top {
+		span {
+			height: 50px;
+			width: 50px;
+			padding: 1.5rem;
+			background-color: #20ad96;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: transform 1s ease-in-out;
+			scale: (1);
+
+			&:hover {
+				transform: scale(1.1);
+				transform: rotate(720deg);
+				scale: (1.2);
+				background-color: #3f3a64;
+			}
+			i {
+				color: white;
+			}
 		}
 	}
 }

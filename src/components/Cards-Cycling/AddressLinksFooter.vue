@@ -1,17 +1,25 @@
 <template>
 	<div class="links-section">
 		<div class="address">
-			<h3>{{ title }}</h3>
-			<p>{{ address }}</p>
-			<p>{{ number }}</p>
-			<p>{{ mail }}</p>
+			<h3>{{ footerData.addressCol.linkTitle }}</h3>
+			<p>{{ footerData.addressCol.location }}</p>
+			<p>{{ footerData.addressCol.phone }}</p>
+			<p>{{ footerData.addressCol.eMail }}</p>
 		</div>
 
 		<div class="social">
-			<a href=""><i class="fa-brands fa-square-facebook"></i></a>
+			<a
+				href=""
+				v-for="social in footerData.addressCol.social"
+				:key="social.socialLink"
+				:icon="`${social.socialLink}`"
+			>
+			</a>
+
+			<!-- <a href=""><i class="fa-brands fa-square-facebook"></i></a>
 			<a href=""><i class="fa-brands fa-twitter"></i></a>
 			<a href=""><i class="fa-brands fa-instagram"></i></a>
-			<a href=""><i class="fa-brands fa-linkedin"></i></a>
+			<a href=""><i class="fa-brands fa-linkedin"></i></a> -->
 		</div>
 	</div>
 </template>
@@ -20,10 +28,7 @@
 export default {
 	name: "AddressLinksFooter",
 	props: {
-		title: String,
-		address: String,
-		number: String,
-		mail: String,
+		footerData: Object,
 	},
 };
 </script>

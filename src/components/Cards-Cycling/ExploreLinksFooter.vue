@@ -1,15 +1,15 @@
 <template>
 	<div class="explore">
-		<h3>{{ title }}</h3>
+		<h3>{{ footerData.exploreCol.linkTitle }}</h3>
 		<div id="col1">
-			<a href="#">{{ linkOne }}</a>
-			<a href="#">{{ linkTwo }}</a>
-			<a href="#">{{ linkThree }}</a>
+			<a v-for="link in footerData.exploreCol.links1" :key="link" href="#">
+				{{ link }}
+			</a>
 		</div>
 		<div id="col2">
-			<a href="#">{{ linkFour }}</a>
-			<a href="#">{{ linkFive }}</a>
-			<a href="#">{{ linkSix }}</a>
+			<a v-for="link in footerData.exploreCol.links2" :key="link" href="#">
+				{{ link }}
+			</a>
 		</div>
 	</div>
 </template>
@@ -18,13 +18,7 @@
 export default {
 	name: "ExploreLinksFooter",
 	props: {
-		title: String,
-		linkOne: String,
-		linkTwo: String,
-		linkThree: String,
-		linkFour: String,
-		linkFive: String,
-		linkSix: String,
+		footerData: Object,
 	},
 };
 </script>
