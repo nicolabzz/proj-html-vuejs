@@ -1,5 +1,5 @@
 <template>
-	<!--
+	<!-- 
     The header is divided in 2 sections, one above the other, the "header-top" and the "header-bottom"
 -->
 	<header>
@@ -71,6 +71,22 @@
 
 			<!-- Big Pic -->
 			<div class="big-pic-presentation">
+				\
+				<div class="dit1">
+					<img src="img/maxcoach-shape-08.png/" alt="" />
+				</div>
+				<div class="dit2">
+					<img src="img/maxcoach-shape-08.png" alt="" />
+				</div>
+				<div class="dit3">
+					<img src="img/rose-circle.png" alt="" />
+				</div>
+				<div class="dit4">
+					<img src="img/maxcoach-shape-07-150x150.png" alt="" />
+				</div>
+				<div class="dit5">
+					<img src="img/maxcoach-shape-02.png" alt="" />
+				</div>
 				<div class="img-fitter">
 					<img
 						src="img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg"
@@ -338,6 +354,33 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+
+		.dit1 {
+			position: absolute;
+			left: 0;
+		}
+		.dit2 {
+			position: absolute;
+			left: 0;
+			bottom: 19%;
+		}
+		.dit3 {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.dit4 {
+			position: absolute;
+			bottom: 3rem;
+			right: 8rem;
+			
+		}
+		.dit5 {
+			position: absolute;
+			right: 0;
+			top: 8rem;
+		}
 
 		.img-fitter {
 			// border: 2px solid brown;
