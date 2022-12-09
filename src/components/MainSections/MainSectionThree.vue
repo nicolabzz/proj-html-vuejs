@@ -30,6 +30,15 @@
 
 		<!-- Button section -->
 		<div class="btn-container">
+			<div class="det1">
+				<img src="img/maxcoach-shape-01.png" alt="">
+			</div>
+			<div class="dit2">
+				<img src="img/gray-circle.png" alt="">
+			</div>
+			<div class="dit3">
+				<img src="img/maxcoach-shape-02.png" alt="">
+			</div>
 			<div class="start-today">
 				<h2>Start today getting <span>Online Certification</span></h2>
 				<h1>You can be your own guiding star with our help!</h1>
@@ -156,7 +165,28 @@ main {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	position: relative;
 	// align-items: center;
+
+	.det1 {
+	position: absolute;
+	// height: 100px;
+	// width: 100px;
+	left: 0;
+	top: 50%;
+	}
+	.dit2 {
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		left: 0;
+		top: 5%;
+	}
+	.dit3 {
+		position: absolute;
+		right: 0;
+		bottom: 15%;
+	}
 
 	.start-today {
 		// border: 2px solid blue;
