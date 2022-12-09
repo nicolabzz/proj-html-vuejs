@@ -215,7 +215,7 @@ header {
 					}
 				}
 			}
-			
+
 			input {
 				padding: 1rem 0.8rem;
 				font-size: 1rem;
@@ -367,7 +367,6 @@ header {
 				height: 100%;
 				width: calc(100% / 6);
 				opacity: 0.5;
-				transition: 0.2s ease-in-out;
 
 				img {
 					object-fit: contain;

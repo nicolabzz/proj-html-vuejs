@@ -10,25 +10,21 @@
 		<!-- Testimonials cards section -->
 		<div class="testimonials-cards-container">
 			<!-- Cards -->
-			<div class="testimonial-card">
-				<div class="testimonial-text-content">
-					<h3>High level of efficency and scientific teaching methods</h3>
-					<p>
-						I am free ro learn at my own peace, fllow my own schedule and choose
-						the subject I want to learn from the syllabus. Great study portal
-						for people like me.
-					</p>
-				</div>
-				<div class="testimonial-info">
-					<div class="testimonial-pic">
-						<img src="img/testimonial-avata-02.jpg" alt="" />
-					</div>
-					<div class="testimonial-name">
-						<h4>MINA HOLLACE</h4>
-						<p>/ Freelancer</p>
-					</div>
-				</div>
+			<CardReviewMS3 
+				v-for="objTestimonial in arrTestimonials"
+				:key="objTestimonial.id"
+				:title="objTestimonial.titleT"
+				:text="objTestimonial.textT"
+				:imgPic="objTestimonial.imgSrcT"
+				:name="objTestimonial.nameT"
+				:job="objTestimonial.jobT"
+			/>
+
+			<div class="selector">
+
 			</div>
+
+
 		</div>
 
 		<!-- Button section -->
@@ -43,8 +39,44 @@
 </template>
 
 <script>
+import CardReviewMS3 from "../Cards-Cycling/CardReviewMS3.vue";
+
 export default {
 	name: "MainSectionThree",
+	components: {
+		CardReviewMS3,
+	},
+	data() {
+		return {
+			arrTestimonials: [
+				{
+					titleT: "It's a choice of quality for people with special needs",
+					textT:
+						"I'm very strict person so I requiire everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.",
+					imgSrcT: "img/testimonial-avata-03.jpg",
+					nameT: "FLORENCE THEMES",
+					jobT: "/ Multimedia Admin",
+				},
+				{
+					titleT: "High level of efficency and scientific teaching methods",
+					textT:
+						"I am free ro learn at my own peace, fllow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+					imgSrcT: "img/testimonial-avata-02.jpg",
+					nameT: "MINA HOLLACE",
+					jobT: "/ Freelancer",
+				},
+				{
+					titleT:
+						"Professional team of specialist and passionate metors at reach",
+					textT:
+						"I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students with students.",
+					imgSrcT: "img/testimonial-avata-04.jpg",
+					nameT: "MADLEY PONDOR",
+					jobT: "/ IT Specialist",
+				},
+			],
+		};
+	},
 };
 </script>
 
@@ -82,65 +114,15 @@ main {
 //Center section (Testimonial cards)
 .testimonials-cards-container {
 	border: 2px solid goldenrod;
-	margin-top: 4rem;
-	height: 550px;
+	margin-top: 2rem;
+	height: 480px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 2rem;
 
-	.testimonial-card {
-		border: 2px solid black;
-		border-radius: 8px;
-		height: 350px;
-		width: 550px;
-		padding: 2rem;
-		background-color: white;
-
-		.testimonial-text-content {
-			border: 2px solid blue;
-			height: 60%;
-			width: 100%;
-			padding: 0 2rem;
-
-			h3 {
-				color: #3f3a64;
-				margin-bottom: 1rem;
-			}
-
-			p {
-				color: #696969;
-				font-weight: 500;
-				line-height: 2;
-			}
-		}
-
-		.testimonial-info {
-			border: 2px solid salmon;
-			display: flex;
-			padding: 0 2rem;
-
-			.testimonial-pic {
-				width: 70px;
-				height: 70px;
-				border-radius: 50%;
-				overflow: hidden;
-			}
-
-			.testimonial-name {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				padding: 0.7rem 2rem;
-
-				h4 {
-					margin-bottom: 1rem;
-					color: #3f3a64;
-					font-weight: 800;
-				}
-
-				p {
-					color: #696969;
-					font-weight: 500;
-				}
-			}
-		}
+	.selector {
+		
 	}
 }
 

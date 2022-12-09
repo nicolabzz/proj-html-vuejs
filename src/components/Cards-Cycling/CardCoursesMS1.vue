@@ -47,7 +47,6 @@ export default {
 		transition: 0.2s ease-in-out;
 
 		&:hover {
-			cursor: pointer;
 			background-color: white;
 			border-radius: 5px;
 			box-shadow: 1px 1px 50px rgb(218, 218, 218);
@@ -59,6 +58,10 @@ export default {
 			width: 170px;
 			border-radius: 50%;
 			overflow: hidden;
+
+			&:hover {
+				cursor: pointer;
+			}
 
 			img {
 				object-fit: cover;
