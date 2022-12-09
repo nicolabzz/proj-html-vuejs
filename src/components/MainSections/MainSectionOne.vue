@@ -14,7 +14,7 @@
 				<div class="lessions-cards-container">
 					<CardCoursesMS1
 						v-for="objCard in arrOnlineCourses"
-						:key="objCard"
+						:key="objCard.id"
 						:imgPic="objCard.imgSrc"
 						:cost="objCard.price"
 						:title="objCard.text"

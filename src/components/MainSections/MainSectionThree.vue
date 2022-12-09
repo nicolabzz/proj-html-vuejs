@@ -31,8 +31,8 @@
 			</div>
 		</div>
 
-		<!-- Start today section -->
-		<div class="start-today-container">
+		<!-- Button section -->
+		<div class="btn-container">
 			<div class="start-today">
 				<h2>Start today getting <span>Online Certification</span></h2>
 				<h1>You can be your own guiding star with our help!</h1>
@@ -53,11 +53,13 @@ export default {
 
 main {
 	background-color: #f8f8f8;
+	// border: 2px solid black;
 }
 
+//Title section
 .tile {
-	border: 2px solid purple;
-	margin-top: 16rem;
+	// border: 2px solid purple;
+	padding-top: 5rem;
 	text-align: center;
 
 	h4 {
@@ -77,13 +79,14 @@ main {
 	}
 }
 
+//Center section (Testimonial cards)
 .testimonials-cards-container {
+	border: 2px solid goldenrod;
 	margin-top: 4rem;
-	// border: 2px solid goldenrod;
 	height: 550px;
 
 	.testimonial-card {
-		// border: 2px solid blue;
+		border: 2px solid black;
 		border-radius: 8px;
 		height: 350px;
 		width: 550px;
@@ -91,7 +94,7 @@ main {
 		background-color: white;
 
 		.testimonial-text-content {
-			// border: 2px solid blue;
+			border: 2px solid blue;
 			height: 60%;
 			width: 100%;
 			padding: 0 2rem;
@@ -109,7 +112,7 @@ main {
 		}
 
 		.testimonial-info {
-			// border: 2px solid salmon;
+			border: 2px solid salmon;
 			display: flex;
 			padding: 0 2rem;
 
@@ -141,7 +144,8 @@ main {
 	}
 }
 
-.start-today-container {
+//Button sectoion
+.btn-container {
 	// border: 2px solid yellowgreen;
 	width: 1150px;
 	height: 300px;

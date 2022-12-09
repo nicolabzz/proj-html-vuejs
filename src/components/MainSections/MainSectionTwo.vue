@@ -1,60 +1,62 @@
 <template>
-	<!-- Second section -->
-	<main>
-		<section class="second-section">
-			<!-- This div sets the second section's max width -->
-			<div class="max-container">
-				<!-- Title -->
-				<div class="title">
-					<h4>MAXCOACH AVAILABLE COURSES</h4>
-					<h1>Access <span>Smart Tutoring</span> Program For Benefits.</h1>
-				</div>
-
-				<!-- Cards smart tutoring course's benefits -->
-				<div class="benefits-cards-container">
-					<CardBenefitsMS2
-						v-for="objCard in arrSmartTutoring"
-						:key="objCard"
-						:imgPic="objCard.imgSrc"
-						:title="objCard.textTitle"
-						:content="objCard.textContent"
-						:link="objCard.textLink"
-						class="CardBenefits"
-					/>
-				</div>
-
-				<!-- "YouTube video" and "enjoy" section -->
-				<div class="yt-n-enjoy-container">
-					<!-- YouTube video container -->
-					<div class="ytv-section">
-						<!-- YT Video -->
-						<div class="video-section">
-							<div class="logo">
-								<img src="img/icon-youtube-play.png" alt="" />
+	<div class="big-cont">
+		<!-- Second section -->
+		<main>
+			<section class="second-section">
+				<!-- This div sets the second section's max width -->
+				<div class="max-container">
+					<!-- Title -->
+					<div class="title">
+						<h4>MAXCOACH AVAILABLE COURSES</h4>
+						<h1>Access <span>Smart Tutoring</span> Program For Benefits.</h1>
+					</div>
+	
+					<!-- Cards smart tutoring course's benefits -->
+					<div class="benefits-cards-container">
+						<CardBenefitsMS2
+							v-for="objCard in arrSmartTutoring"
+							:key="objCard.id"
+							:imgPic="objCard.imgSrc"
+							:title="objCard.textTitle"
+							:content="objCard.textContent"
+							:link="objCard.textLink"
+							class="CardBenefits"
+						/>
+					</div>
+	
+					<!-- "YouTube video" and "enjoy" section -->
+					<div class="yt-n-enjoy-container">
+						<!-- YouTube video container -->
+						<div class="ytv-section">
+							<!-- YT Video -->
+							<div class="video-section">
+								<div class="logo">
+									<img src="img/icon-youtube-play.png" alt="" />
+								</div>
+							</div>
+						</div>
+	
+						<!-- Enjoy container-->
+						<div class="enjoy-container">
+							<div class="enjoy-text">
+								<h4>GET STARTED <span>EFFORTLESSY</span></h4>
+								<h1>Enjoy Our <span>Companionship</span></h1>
+								<p>
+									Sneek peek into what has in store for you on our online teaching
+									and mentoring portal. Seek for some hidden hints of early-bird
+									rewards as well.
+								</p>
+								<a href=""
+									>Download free guidebook
+									<i class="fa-solid fa-arrow-right-long"></i
+								></a>
 							</div>
 						</div>
 					</div>
-
-					<!-- Enjoy container-->
-					<div class="enjoy-container">
-						<div class="enjoy-text">
-							<h4>GET STARTED <span>EFFORTLESSY</span></h4>
-							<h1>Enjoy Our <span>Companionship</span></h1>
-							<p>
-								Sneek peek into what has in store for you on our online teaching
-								and mentoring portal. Seek for some hidden hints of early-bird
-								rewards as well.
-							</p>
-							<a href=""
-								>Download free guidebook
-								<i class="fa-solid fa-arrow-right-long"></i
-							></a>
-						</div>
-					</div>
 				</div>
-			</div>
-		</section>
-	</main>
+			</section>
+		</main>
+	</div>
 </template>
 
 <script>
@@ -78,13 +80,15 @@ export default {
 				{
 					imgSrc: "img/about-us-02-image-box-02.png",
 					textTitle: "Cloud Storage",
-					textContent: "You can store online lessons via online cloud or download to your device and revise lessions on the way.",
+					textContent:
+						"You can store online lessons via online cloud or download to your device and revise lessions on the way.",
 					textLink: "Get Free Quote",
 				},
 				{
 					imgSrc: "img/home-2-image-box-03.png",
 					textTitle: "Multimedia Channels",
-					textContent: "We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.",
+					textContent:
+						"We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.",
 					textLink: "Start Here",
 				},
 			],
@@ -96,11 +100,24 @@ export default {
 <style scoped lang="scss">
 @import "../../css/global.scss";
 
+.big-cont {
+	background-color: #f8f8f8;
+}
+
+main {
+	// border: 2px solid black;
+	background-color: white;
+	border-bottom-right-radius: 40%;
+	height: 1200px;
+}
+
 .max-container {
 	// border: 2px solid black;
 	width: 1375px;
 	height: 1100px;
-	margin: auto;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+
 
 	// Title section
 	.title {
@@ -121,7 +138,7 @@ export default {
 			color: #3f3a64;
 
 			span {
-				color: #20AD96;
+				color: #20ad96;
 				font-weight: 400;
 			}
 		}
@@ -148,7 +165,7 @@ export default {
 		display: flex;
 
 		.ytv-section {
-			border: 2px solid palevioletred;
+			// border: 2px solid palevioletred;
 			width: 60%;
 			position: relative;
 
@@ -177,14 +194,14 @@ export default {
 		}
 
 		.enjoy-container {
-			border: 2px solid palevioletred;
+			// border: 2px solid palevioletred;
 			width: 40%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 
 			.enjoy-text {
-				border: 2px solid goldenrod;
+				// border: 2px solid goldenrod;
 				width: 100%;
 				padding: 0 3rem;
 

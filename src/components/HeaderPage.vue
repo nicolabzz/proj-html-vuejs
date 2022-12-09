@@ -71,7 +71,7 @@
 					<div class="free-sample">
 						<p>
 							Have a quwstion?
-							<span>
+							<span class="hover-underline-animation">
 								Get Free Sample <i class="fa-solid fa-arrow-right-long"></i>
 							</span>
 						</p>
@@ -93,22 +93,22 @@
 			<div class="clinents-logos">
 				<div class="client-img-container">
 					<div class="client-img-fitter">
-						<img src="img/client-logo-01.png" alt="" />
+						<img id="client1" src="img/client-logo-01.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="img/client-logo-02.png" alt="" />
+						<img id="client2" src="img/client-logo-02.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="img/client-logo-03.png" alt="" />
+						<img id="client3" src="img/client-logo-03.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="img/client-logo-04.png" alt="" />
+						<img id="client4" src="img/client-logo-04.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="img/client-logo-05.png" alt="" />
+						<img id="client5" src="img/client-logo-05.png" alt="" />
 					</div>
 					<div class="client-img-fitter">
-						<img src="img/client-logo-06.png" alt="" />
+						<img id="client6" src="img/client-logo-06.png" alt="" />
 					</div>
 				</div>
 			</div>
@@ -133,11 +133,11 @@ header {
 	// border: 2px solid green;
 	background-color: white;
 	width: 100%;
-	position: fixed;
+	// position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 20px;
+	// z-index: 20px;
 	display: flex;
 	justify-content: center;
 	box-shadow: 0 0.1px 15px rgb(197, 196, 196);
@@ -163,6 +163,21 @@ header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
+			.search-section {
+				// border: 2px solid black;
+				padding-right: 0.5rem;
+				background-color: #f5f5f5;
+				border-radius: 5px;
+
+				i {
+					cursor: pointer;
+
+					&:hover {
+						color: #20ad96;
+					}
+				}
+			}
 
 			nav {
 				display: flex;
@@ -249,14 +264,16 @@ header {
 
 			.text-box {
 				h1 {
-					font-size: 2.5rem;
+					font-size: 3rem;
 					color: #3f3a64;
 					margin-bottom: 0.6rem;
 				}
 
 				p:nth-child(2) {
-					color: #aeadae;
+					color: #8c89a2;
 					font-weight: 500;
+					line-height: 2rem;
+					margin-bottom: 1rem;
 				}
 			}
 
@@ -269,6 +286,7 @@ header {
 					color: white;
 					font-weight: 800;
 					transition: 0.2s ease-in-out;
+					margin-bottom: 1.5rem;
 
 					&:hover {
 						background-color: #3f3a64;
@@ -285,10 +303,32 @@ header {
 				p:last-child {
 					color: #aeadae;
 					font-weight: 500;
+					cursor: pointer;
 
 					span {
 						color: #20ad96;
 						font-weight: 600;
+						border-bottom: 0.1px solid rgb(236, 236, 236);
+						position: relative;
+						display: inline-block;
+
+						&::after {
+							content: "";
+							position: absolute;
+							width: 100%;
+							height: 1px;
+							bottom: 0;
+							left: 0;
+							background-color: rgb(236, 236, 236);
+							transform-origin: bottom right;
+							transition: transform 0.25s ease-out;
+							color: #20ad96;
+							z-index: 0;
+						}
+
+						&:hover::after {
+							transform-origin: bottom left;
+						}
 
 						i {
 							margin-left: 0.3rem;
@@ -309,8 +349,8 @@ header {
 
 		.img-fitter {
 			// border: 2px solid brown;
-			height: 500px;
-			width: 500px;
+			height: 550px;
+			width: 550px;
 			border-radius: 50%;
 			overflow: hidden;
 		}
@@ -335,14 +375,37 @@ header {
 				height: 100%;
 				width: calc(100% / 6);
 				opacity: 0.5;
+				transition: 0.2s ease-in-out;
 
 				img {
 					object-fit: contain;
-					scale: 0.4;
 					height: 100%;
+				}
+
+				#client1 {
+					padding: 2.6rem;
+				}
+
+				#client2 {
+					padding: 3.5rem;
+				}
+
+				#client3 {
+					padding: 1.1rem;
+				}
+
+				#client4,
+				#client5,
+				#client6 {
+					padding: 2rem;
 				}
 			}
 		}
 	}
+}
+
+.container-top {
+	position: fixed;
+	z-index: 20;
 }
 </style>

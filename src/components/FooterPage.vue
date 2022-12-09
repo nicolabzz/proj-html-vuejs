@@ -31,7 +31,15 @@
 			<!-- This div sets the max width for the contents -->
 			<div class="bottom-max-container">
 				<!--  Links -->
-				<div class="links-section">
+				<AddressLinksFooter
+					v-for="objLinksAddress in dataFooter.arrLinksAddress"
+					:key="objLinksAddress.id"
+					:title="objLinksAddress.dataFooter.arrLinksAddress"
+					:address="objLinksAddress.dataFooter.arrLinksAddress"
+					:number="objLinksAddress.dataFooter.arrLinksAddress"
+					:mail="objLinksAddress.dataFooter.arrLinksAddress"
+				/>
+				<!-- <div class="links-section">
 					<div class="address">
 						<h3>Address</h3>
 						<p>382 NE 191st St # 87394 Miami, FL 33179-3899</p>
@@ -45,10 +53,30 @@
 						<a href=""><i class="fa-brands fa-instagram"></i></a>
 						<a href=""><i class="fa-brands fa-linkedin"></i></a>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="explore-information">
-					<div class="explore">
+					<ExploreLinksFooter
+						v-for="objLinksExplore in dataFooter.arrLinksExplore"
+						:key="objLinksExplore.id"
+						:title="objLinksExplore.dataFooter.arrLinksExplore"
+						:linkOne="objLinksExplore.dataFooter.arrLinksExplore"
+						:linkTwo="objLinksExplore.dataFooter.arrLinksExplore"
+						:linkThree="objLinksExplore.dataFooter.arrLinksExplore"
+						:linkFour="objLinksExplore.dataFooter.arrLinksExplore"
+						:linkFive="objLinksExplore.dataFooter.arrLinksExplore"
+						:linkSix="objLinksExplore.dataFooter.arrLinksExplore"
+					/>
+					<InformationLinksFooter
+						v-for="objLinksInformation in dataFooter.arrLinksInformation"
+						:key="objLinksInformation.id"
+						:title="objLinksInformation.dataFooter.arrLinksInformation"
+						:linkOne="objLinksInformation.dataFooter.arrLinksInformation"
+						:linkTwo="objLinksInformation.dataFooter.arrLinksInformation"
+						:linkThree="objLinksInformation.dataFooter.arrLinksInformation"
+						:linkFour="objLinksInformation.dataFooter.arrLinksInformation"
+					/>
+					<!-- <div class="explore">
 						<h3>Explore</h3>
 						<div id="col1">
 							<a href="#">Start here</a>
@@ -69,7 +97,7 @@
 							<a href="#">Privacy policy</a>
 							<a href="#">Terms of services</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<!-- Rights Reserved -->
@@ -85,8 +113,51 @@
 </template>
 
 <script>
+import AddressLinksFooter from "@/components/Cards-Cycling/AddressLinksFooter.vue";
+import ExploreLinksFooter from "@/components/Cards-Cycling/ExploreLinksFooter.vue";
+import InformationLinksFooter from "@/components/Cards-Cycling/InformationLinksFooter.vue";
+
 export default {
 	name: "FooterPage",
+	components: {
+		AddressLinksFooter,
+		ExploreLinksFooter,
+		InformationLinksFooter,
+	},
+	data() {
+		return {
+			dataFooter: {
+				arrLinksAddress: [
+					{
+						linksTitle: "Address",
+						location: "382 NE 191st St # 87394 Miami, FL 33179-3899",
+						phone: "+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)",
+						eMail: "support@maxcoach.com",
+					},
+				],
+				arrLinksExplore: [
+					{
+						linksTitle: "Explore",
+						link1: "Start here",
+						link2: "Blog",
+						link3: "About us",
+						link4: "Success story",
+						link5: "Courses",
+						link6: "Contuct us",
+					},
+				],
+				arrLinksInformation: [
+					{
+						linksTitle: "Information",
+						link1: "Membership",
+						link2: "Purchase guide",
+						link3: "Privacy policy",
+						link4: "Terms of services",
+					},
+				],
+			},
+		};
+	},
 };
 </script>
 
@@ -170,10 +241,10 @@ footer {
 				font-weight: 800;
 				color: white;
 				background-color: #20ad96;
-				transition: .3s ease-in-out;
-				
+				transition: 0.3s ease-in-out;
+
 				&:hover {
-					background-color: #3F3A64;
+					background-color: #3f3a64;
 					cursor: pointer;
 				}
 			}
@@ -192,36 +263,47 @@ footer {
 		flex-wrap: wrap;
 	}
 
-	.links-section {
-		// border: 2px solid blue;
-		height: 250px;
-		width: 50%;
-		line-height: 3rem;
+	// .links-section {
+	// 	// border: 2px solid blue;
+	// 	height: 250px;
+	// 	width: 50%;
+	// 	line-height: 3rem;
 
-		.address {
-			h3 {
-				color: #333333;
-			}
+	// 	.address {
+	// 		h3 {
+	// 			color: #333333;
+	// 		}
 
-			p {
-				color: #696969;
-				font-weight: 600;
-				font-size: 0.86rem;
-			}
-		}
+	// 		p {
+	// 			color: #696969;
+	// 			font-weight: 600;
+	// 			font-size: 0.86rem;
+	// 			transition: 0.15s ease-in-out;
+	// 			cursor: pointer;
+	// 		}
 
-		.social {
-			font-size: 1.5rem;
-			margin: 1rem 0 0 0;
-			width: 40%;
-			display: flex;
-			justify-content: space-between;
+	// 		p:nth-child(4):hover {
+	// 			color: #20ad96;
+	// 		}
+	// 	}
 
-			a {
-				color: #b1b1b1;
-			}
-		}
-	}
+	// 	.social {
+	// 		font-size: 1.5rem;
+	// 		margin: 1rem 0 0 0;
+	// 		width: 40%;
+	// 		display: flex;
+	// 		justify-content: space-between;
+
+	// 		a {
+	// 			color: #b1b1b1;
+	// 			transition: 0.15s ease-in-out;
+
+	// 			&:hover {
+	// 				color: #20ad96;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	.explore-information {
 		// border: 2px solid rgb(0, 192, 99);
@@ -229,59 +311,69 @@ footer {
 		width: 50%;
 		display: flex;
 
-		.explore {
-			// border: 2px solid rgb(60, 213, 224);
-			width: 50%;
-			padding-top: 0.7rem;
+		// .explore {
+		// 	// border: 2px solid rgb(60, 213, 224);
+		// 	width: 50%;
+		// 	padding-top: 0.7rem;
 
-			h3 {
-				color: #333333;
-				width: 100%;
-			}
+		// 	h3 {
+		// 		color: #333333;
+		// 		width: 100%;
+		// 	}
 
-			#col1 {
-				// border: 1px solid black;
-				display: inline-block;
-				line-height: 3rem;
-				width: 50%;
-			}
-			#col2 {
-				// border: 1px solid black;
-				display: inline-block;
-				line-height: 3rem;
-				width: 50%;
-			}
+		// 	#col1 {
+		// 		// border: 1px solid black;
+		// 		display: inline-block;
+		// 		line-height: 3rem;
+		// 		width: 50%;
+		// 	}
+		// 	#col2 {
+		// 		// border: 1px solid black;
+		// 		display: inline-block;
+		// 		line-height: 3rem;
+		// 		width: 50%;
+		// 	}
 
-			a {
-				display: block;
-				color: #696969;
-				font-weight: 600;
-				font-size: 13px;
-			}
-		}
+		// 	a {
+		// 		display: block;
+		// 		color: #696969;
+		// 		font-weight: 600;
+		// 		font-size: 13px;
+		// 		transition: 0.15s ease-in-out;
 
-		.information {
-			// border: 2px solid violet;
-			width: 50%;
-			padding-top: 0.7rem;
+		// 		&:hover {
+		// 			color: #20ad96;
+		// 		}
+		// 	}
+		// }
 
-			#col3 {
-				// border: 1px solid black;
-				line-height: 3rem;
-				width: 50%;
+		// .information {
+		// 	// border: 2px solid violet;
+		// 	width: 50%;
+		// 	padding-top: 0.7rem;
 
-				a {
-					display: block;
-					color: #696969;
-					font-weight: 600;
-					font-size: 13px;
-				}
+		// 	#col3 {
+		// 		// border: 1px solid black;
+		// 		line-height: 3rem;
+		// 		width: 50%;
 
-				h3 {
-					color: #333333;
-				}
-			}
-		}
+		// 		a {
+		// 			display: block;
+		// 			color: #696969;
+		// 			font-weight: 600;
+		// 			font-size: 13px;
+		// 			transition: 0.15s ease-in-out;
+
+		// 			&:hover {
+		// 				color: #20ad96;
+		// 			}
+		// 		}
+
+		// 		h3 {
+		// 			color: #333333;
+		// 		}
+		// 	}
+		// }
 	}
 
 	.right-reserved {
