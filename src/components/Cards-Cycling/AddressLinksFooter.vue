@@ -15,11 +15,6 @@
 				:icon="`${social.socialLink}`"
 			>
 			</a>
-
-			<!-- <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-			<a href=""><i class="fa-brands fa-twitter"></i></a>
-			<a href=""><i class="fa-brands fa-instagram"></i></a>
-			<a href=""><i class="fa-brands fa-linkedin"></i></a> -->
 		</div>
 	</div>
 </template>

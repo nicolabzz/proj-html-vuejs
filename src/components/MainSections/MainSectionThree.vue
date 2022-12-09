@@ -10,7 +10,7 @@
 		<!-- Testimonials cards section -->
 		<div class="testimonials-cards-container">
 			<!-- Cards -->
-			<CardReviewMS3 
+			<CardReviewMS3
 				v-for="objTestimonial in arrTestimonials"
 				:key="objTestimonial.id"
 				:title="objTestimonial.titleT"
@@ -21,10 +21,11 @@
 			/>
 
 			<div class="selector">
-
+				<span><i class="fa-solid fa-circle"></i></span>
+				<span><i class="fa-solid fa-circle"></i></span>
+				<span><i class="fa-solid fa-circle"></i></span>
+				<span><i class="fa-solid fa-circle"></i></span>
 			</div>
-
-
 		</div>
 
 		<!-- Button section -->
@@ -113,7 +114,7 @@ main {
 
 //Center section (Testimonial cards)
 .testimonials-cards-container {
-	border: 2px solid goldenrod;
+	// border: 2px solid goldenrod;
 	margin-top: 2rem;
 	height: 480px;
 	display: flex;
@@ -122,7 +123,27 @@ main {
 	padding: 0 2rem;
 
 	.selector {
+		// border: 2px solid brown;
+		width: 700px;
+		margin: auto;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
 		
+		i {
+			color: #B7B5C4;
+			font-size: .75rem;
+			transition: .1s ease-in;
+			scale: (1);
+
+			&:hover {
+				scale: (1.2);
+				cursor: pointer;
+				color: #3F3A64;
+			}
+		}
 	}
 }
 

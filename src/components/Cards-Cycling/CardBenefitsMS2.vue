@@ -35,12 +35,13 @@ export default {
 .card {
 	// border: 2px solid greenyellow;
 	width: calc(100% / 3);
+	padding-left: 40px;
 
 	.card-pic {
 		// border: 2px solid salmon;
 		height: 50%;
 		width: 100%;
-		padding: 0.7rem 0 0 50px;
+		// padding: 0.7rem 0 0 50px;
 
 		img {
 			height: 90%;
@@ -52,7 +53,7 @@ export default {
 	.card-text {
 		// border: 1px solid black;
 		height: 50%;
-		padding: 0.5px 0 0 45px;
+		// padding: 0.5px 0 0 45px;
 
 		h2 {
 			color: #3f3a64;
@@ -61,6 +62,8 @@ export default {
 		p {
 			color: #696969;
 			padding: 2rem 0;
+			font-size: 13px;
+			line-height: 1.3rem;
 		}
 
 		a {

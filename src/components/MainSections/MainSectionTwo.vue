@@ -10,7 +10,7 @@
 						<h4>MAXCOACH AVAILABLE COURSES</h4>
 						<h1>Access <span>Smart Tutoring</span> Program For Benefits.</h1>
 					</div>
-	
+
 					<!-- Cards smart tutoring course's benefits -->
 					<div class="benefits-cards-container">
 						<CardBenefitsMS2
@@ -23,7 +23,7 @@
 							class="CardBenefits"
 						/>
 					</div>
-	
+
 					<!-- "YouTube video" and "enjoy" section -->
 					<div class="yt-n-enjoy-container">
 						<!-- YouTube video container -->
@@ -35,16 +35,21 @@
 								</div>
 							</div>
 						</div>
-	
+
 						<!-- Enjoy container-->
 						<div class="enjoy-container">
+							<div class="details-container">
+								<div class="details-img-section">
+									<img src="img/rose-circle.png" alt="" />
+								</div>
+							</div>
 							<div class="enjoy-text">
 								<h4>GET STARTED <span>EFFORTLESSY</span></h4>
 								<h1>Enjoy Our <span>Companionship</span></h1>
 								<p>
-									Sneek peek into what has in store for you on our online teaching
-									and mentoring portal. Seek for some hidden hints of early-bird
-									rewards as well.
+									Sneek peek into what has in store for you on our online
+									teaching and mentoring portal. Seek for some hidden hints of
+									early-bird rewards as well.
 								</p>
 								<a href=""
 									>Download free guidebook
@@ -108,16 +113,15 @@ main {
 	// border: 2px solid black;
 	background-color: white;
 	border-bottom-right-radius: 40%;
-	height: 1200px;
+	height: 1400px;
 }
 
 .max-container {
 	// border: 2px solid black;
 	width: 1375px;
-	height: 1100px;
+	height: 1400px;
 	margin: 0 auto;
 	margin-bottom: 2rem;
-
 
 	// Title section
 	.title {
@@ -132,10 +136,14 @@ main {
 
 		h4 {
 			color: #9795ab;
+			// font-size: 1.5rem;
+			font-weight: 500;
+			letter-spacing: 1px;
 		}
 
 		h1 {
 			color: #3f3a64;
+			font-size: 1.7rem;
 
 			span {
 				color: #20ad96;
@@ -149,8 +157,8 @@ main {
 		// border: 2px solid cadetblue;
 		margin: 0 auto;
 		display: flex;
-		width: 1250px;
-		height: 35%;
+		width: 1000px;
+		height: 25%;
 
 		.CardBenefits {
 			flex: 0 0 33.33333333333%;
@@ -199,11 +207,27 @@ main {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex-direction: column;
+
+			.details-container {
+				// border: 2px solid blue;
+				width: 100%;
+				
+				.details-img-section {
+					// border: 2px solid yellow;
+					width: 100px;
+					height: 100px;
+					margin-left: 1rem;
+
+					img {
+					}
+				}
+			}
 
 			.enjoy-text {
 				// border: 2px solid goldenrod;
 				width: 100%;
-				padding: 0 3rem;
+				padding: 0 2.6rem;
 
 				h4 {
 					color: #9795ab;
@@ -234,7 +258,7 @@ main {
 				}
 
 				a {
-					border-bottom: 1px solid lavender;
+					// border-bottom: 1px solid lavender;
 					color: #25ab94;
 					font-weight: 700;
 				}

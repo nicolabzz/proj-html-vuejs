@@ -2,7 +2,7 @@
 	<div class="information">
 		<h3>{{ footerData.informationLinks.linkTitle }}</h3>
 		<div id="col3">
-			<a href="!#" v-for="link in footerData.informationCol.links" :key="link" >
+			<a href="#" v-for="link in footerData.informationCol.links" :key="link" >
 				{{link}}
 			</a>
 		</div>
