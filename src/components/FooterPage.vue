@@ -46,16 +46,6 @@
 					<ExploreLinksFooter :footerData="footerData" />
 
 					<InformationLinksFooter :footerData="footerData" />
-
-					<div class="information">
-						<h3>Information</h3>
-						<div id="col3">
-							<a href="#">Membership</a>
-							<a href="#">Purchase guide</a>
-							<a href="#">Privacy policy</a>
-							<a href="#">Terms of services</a>
-						</div>
-					</div>
 				</div>
 
 				<!-- Rights Reserved -->
@@ -270,34 +260,6 @@ footer {
 		height: 250px;
 		width: 50%;
 		display: flex;
-
-		.information {
-			// border: 2px solid violet;
-			width: 50%;
-			padding-top: 0.7rem;
-
-			#col3 {
-				// border: 1px solid black;
-				line-height: 3rem;
-				width: 50%;
-
-				a {
-					display: block;
-					color: #696969;
-					font-weight: 600;
-					font-size: 13px;
-					transition: 0.15s ease-in-out;
-
-					&:hover {
-						color: #20ad96;
-					}
-				}
-
-				h3 {
-					color: #333333;
-				}
-			}
-		}
 	}
 
 	.right-reserved {
